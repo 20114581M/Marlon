@@ -1,5 +1,3 @@
-import React from 'react'
-
 const links = [
   { label: 'About Me', id: 'bodysection' },
   { label: 'Projects', id: 'projectsection' },

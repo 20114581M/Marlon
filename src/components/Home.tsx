@@ -1,4 +1,3 @@
-import React from 'react'
 import Hero from './hero'
 import Nav from './nav'
 import Body from './body'
