@@ -90,6 +90,7 @@ function Footer() {
           display: flex;
           align-items: center;
           gap: 4px;
+          flex-wrap: wrap;
         }
 
         .ft-nav-btn {
@@ -101,10 +102,11 @@ function Footer() {
           background: #d4ff5c;
           border: none;
           cursor: pointer;
-          padding: 9px 18px;
+          padding: 9px 16px;
           border-radius: 2px;
           font-family: inherit;
           transition: opacity 0.2s;
+          white-space: nowrap;
         }
 
         .ft-nav-btn:hover {
@@ -141,8 +143,10 @@ function Footer() {
           border: 1px solid rgba(255,255,255,0.06);
           padding: 4px 10px;
           border-radius: 999px;
+          white-space: nowrap;
         }
 
+        /* Tablet */
         @media (max-width: 768px) {
           .ft-wrap {
             padding: 0 32px;
@@ -150,16 +154,23 @@ function Footer() {
           .ft-top-bar {
             flex-direction: column;
             align-items: flex-start;
-            gap: 28px;
+            gap: 24px;
           }
         }
 
+        /* Mobile */
         @media (max-width: 480px) {
           .ft-wrap {
             padding: 0 20px;
           }
           .ft-nav {
-            flex-wrap: wrap;
+            width: 100%;
+          }
+          .ft-nav-btn {
+            flex: 1 1 auto;
+            text-align: center;
+            font-size: 9px;
+            padding: 9px 10px;
           }
           .ft-bottom-bar {
             flex-direction: column;

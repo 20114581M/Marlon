@@ -63,10 +63,13 @@ function Contactus() {
       width: '100%',
       color: '#f0ece3',
       fontFamily: "'Inter', 'Helvetica Neue', sans-serif",
-      padding: '80px 0px',backgroundColor: 'rgba(10, 10, 10, 0.80)',
+      padding: '80px 60px',
+      backgroundColor: 'rgba(10, 10, 10, 0.80)',
+      boxSizing: 'border-box',
     }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap');
+
         .ct-input:focus {
           border-color: rgba(212,255,92,0.4) !important;
           background: rgba(212,255,92,0.03) !important;
@@ -74,38 +77,64 @@ function Contactus() {
         .ct-input::placeholder {
           color: rgba(240,236,227,0.18);
         }
-        @media (max-width: 768px) {
+
+        .ct-outer {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 80px;
+          align-items: start;
+        }
+
+        .ct-left {
+          position: sticky;
+          top: 80px;
+        }
+
+        .ct-phone-row {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 16px;
+        }
+
+        /* Tablet */
+        @media (max-width: 900px) {
           #Contactussection {
             padding: 60px 32px !important;
           }
-          .ct-row {
+          .ct-outer {
             grid-template-columns: 1fr !important;
+            gap: 40px !important;
+          }
+          .ct-left {
+            position: relative !important;
+            top: auto !important;
           }
         }
+
+        /* Mobile */
         @media (max-width: 480px) {
           #Contactussection {
             padding: 48px 20px !important;
+          }
+          .ct-phone-row {
+            grid-template-columns: 1fr !important;
           }
         }
       `}</style>
 
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
 
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          gap: '80px',
-          alignItems: 'start',
-        }} className="ct-row">
+        <div className="ct-outer">
 
-          <div style={{ position: 'sticky', top: '80px' }}>
+          {/* Left: info */}
+          <div className="ct-left">
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>
-              <span style={{ width: '28px', height: '1px', background: 'rgba(212,255,92,0.5)', display: 'inline-block' }} />
+              <span style={{ width: '28px', height: '1px', background: 'rgba(212,255,92,0.5)', display: 'inline-block', flexShrink: 0 }} />
               <span style={{ fontSize: '9px', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(240,236,227,0.35)' }}>
                 Get In Touch
               </span>
             </div>
-            <h2 style={{ fontSize: 'clamp(40px, 4.5vw, 68px)', fontWeight: 800, lineHeight: 0.95, letterSpacing: '-0.04em', margin: '0 0 28px' }}>
+            <h2 style={{ fontSize: 'clamp(36px, 4.5vw, 68px)', fontWeight: 800, lineHeight: 0.95, letterSpacing: '-0.04em', margin: '0 0 28px' }}>
               Contact<br />
               <span style={{ color: '#d4ff5c', fontStyle: 'italic' }}>Me.</span>
             </h2>
@@ -121,13 +150,14 @@ function Contactus() {
                   <span style={{ fontSize: '13px' }}>{icon}</span>
                   <div>
                     <p style={{ fontSize: '8.5px', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(240,236,227,0.25)', margin: '0 0 2px' }}>{label}</p>
-                    <p style={{ fontSize: '12px', fontWeight: 300, color: 'rgba(240,236,227,0.5)', margin: 0 }}>{value}</p>
+                    <p style={{ fontSize: '12px', fontWeight: 300, color: 'rgba(240,236,227,0.5)', margin: 0, wordBreak: 'break-all' }}>{value}</p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
 
+          {/* Right: form */}
           <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '20px', paddingTop: '4px' }}>
 
             <div>
@@ -144,7 +174,7 @@ function Contactus() {
               />
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+            <div className="ct-phone-row">
               <div>
                 <label style={labelStyle}>Phone Number</label>
                 <input

@@ -30,12 +30,29 @@ function Projects() {
       color: '#f0ece3',
       fontFamily: "'Inter', 'Helvetica Neue', sans-serif",
       padding: '80px 60px',
+      boxSizing: 'border-box',
     }}>
+      <style>{`
+        @media (max-width: 900px) {
+          #projectsection {
+            padding: 60px 32px !important;
+          }
+        }
+        @media (max-width: 480px) {
+          #projectsection {
+            padding: 48px 20px !important;
+          }
+          .proj-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
+
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
 
         <div style={{ marginBottom: '52px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>
-            <span style={{ width: '28px', height: '1px', background: 'rgba(212,255,92,0.5)', display: 'inline-block' }} />
+            <span style={{ width: '28px', height: '1px', background: 'rgba(212,255,92,0.5)', display: 'inline-block', flexShrink: 0 }} />
             <span style={{ fontSize: '9px', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(240,236,227,0.35)' }}>
               My Work
             </span>
@@ -46,11 +63,14 @@ function Projects() {
           </h2>
         </div>
 
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-          gap: '20px',
-        }}>
+        <div
+          className="proj-grid"
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gap: '20px',
+          }}
+        >
           {projects.map(({ id, title, description, url }) => (
             <div
               key={id}
@@ -107,10 +127,7 @@ function Projects() {
                 )}
               </div>
 
-              <div style={{
-                padding: '20px',
-                borderTop: '1px solid rgba(255,255,255,0.06)',
-              }}>
+              <div style={{ padding: '20px', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
                   <p style={{ fontSize: '14px', fontWeight: 700, letterSpacing: '-0.02em', margin: 0, color: '#f0ece3' }}>
                     {title}
@@ -123,6 +140,8 @@ function Projects() {
                     border: '1px solid rgba(212,255,92,0.15)',
                     padding: '3px 8px',
                     borderRadius: '999px',
+                    flexShrink: 0,
+                    marginLeft: '8px',
                   }}>
                     Live
                   </span>
