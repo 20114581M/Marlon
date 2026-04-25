@@ -61,17 +61,6 @@ function Nav() {
         }
       `}</style>
 
-      <nav className="nav-wrap">
-        {links.map(({ label, id }) => (
-          <button
-            key={id}
-            className="nav-btn"
-            onClick={() => handleScroll(id)}
-          >
-            {label}
-          </button>
-        ))}
-      </nav>
     </>
   )
 }

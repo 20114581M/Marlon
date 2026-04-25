@@ -4,11 +4,11 @@ import LogIN from './components/logIN'
 import ContactMessages from './components/ContactMessages'
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Marlon">
       <Routes>
-        <Route path="/Marlon/" element={<Home />} />
-        <Route path="/Marlon/login" element={<LogIN />} />
-        <Route path="/Marlon/contact-messages" element={<ContactMessages />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<LogIN />} />
+        <Route path="/contact-messages" element={<ContactMessages />} />
       </Routes>
     </BrowserRouter>
   )
