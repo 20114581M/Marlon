@@ -254,7 +254,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           }
         }
 
-        /* Mobile */
+
         @media (max-width: 480px) {
           #bodysection {
             padding: 48px 20px !important;
