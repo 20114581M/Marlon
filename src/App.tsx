@@ -6,9 +6,9 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<LogIN />} />
-        <Route path="/contact-messages" element={<ContactMessages />} />
+        <Route path="/Marlon/" element={<Home />} />
+        <Route path="/Marlon/login" element={<LogIN />} />
+        <Route path="/Marlon/contact-messages" element={<ContactMessages />} />
       </Routes>
     </BrowserRouter>
   )
