@@ -115,52 +115,159 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
             text-align: center;
           }
         }
-      `}),(0,j.jsx)(`nav`,{className:`nav-wrap`,children:Xn.map(({label:t,id:n})=>(0,j.jsx)(`button`,{className:`nav-btn`,onClick:()=>e(n),children:t},n))})]})}var Qn=[{label:`About Me`,id:`bodysection`},{label:`Projects`,id:`projectsection`},{label:`Contact Me`,id:`Contactussection`}];function $n(){let e=e=>{let t=document.getElementById(e);t&&t.scrollIntoView({behavior:`smooth`})};return(0,j.jsxs)(j.Fragment,{children:[(0,j.jsx)(`style`,{children:`
-        .nav-wrap {
-          display: flex;
-          justify-content: center;
-          gap: 8px;
-          flex-wrap: wrap;
-          padding: 20px 20px 0;
-          border-top: 1px solid rgba(255,255,255,0.06);
-          width: 100%;
-          max-width: 480px;
+      `}),(0,j.jsx)(`nav`,{className:`nav-wrap`,children:Xn.map(({label:t,id:n})=>(0,j.jsx)(`button`,{className:`nav-btn`,onClick:()=>e(n),children:t},n))})]})}function Qn(){return(0,j.jsxs)(`div`,{id:`bodysection`,style:{width:`100%`,color:`#f0ece3`,fontFamily:`'Inter', 'Helvetica Neue', sans-serif`,padding:`80px 60px`,backgroundColor:`rgba(10, 10, 10, 0.80)`,marginTop:`70px`,boxSizing:`border-box`},children:[(0,j.jsx)(`style`,{children:`
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap');
+
+        .body-outer {
+          display: grid;
+          grid-template-columns: 280px 1fr;
+          gap: 80px;
+          align-items: start;
+          max-width: 1200px;
           margin: 0 auto;
-          box-sizing: border-box;
         }
 
-        .nav-btn {
-          font-size: 10px;
-          font-weight: 700;
-          letter-spacing: 0.12em;
+        .body-left {
+          display: flex;
+          flex-direction: column;
+          position: sticky;
+          top: 80px;
+        }
+
+        .who-label {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 16px;
+        }
+
+        .who-line {
+          width: 28px;
+          height: 1px;
+          background: rgba(212,255,92,0.5);
+          display: inline-block;
+          flex-shrink: 0;
+        }
+
+        .who-text {
+          font-size: 9px;
+          letter-spacing: 0.18em;
           text-transform: uppercase;
-          color: #0c0c0c;
-          background-color: #d4ff5c;
-          padding: 10px 16px;
-          border-radius: 2px;
-          border: none;
-          cursor: pointer;
-          font-family: "'Inter', 'Helvetica Neue', sans-serif";
-          transition: opacity 0.2s;
-          white-space: nowrap;
+          color: rgba(240,236,227,0.35);
+          font-weight: 400;
         }
 
-        .nav-btn:hover {
-          opacity: 0.75;
+        .heading-about {
+          font-size: clamp(44px, 6vw, 80px);
+          font-weight: 800;
+          line-height: 0.9;
+          letter-spacing: -0.04em;
+          color: #f0ece3;
+          text-transform: uppercase;
+          margin: 0;
         }
 
-        @media (max-width: 400px) {
-          .nav-wrap {
-            gap: 6px;
+        .heading-me {
+          font-size: clamp(44px, 6vw, 80px);
+          font-weight: 800;
+          line-height: 0.9;
+          letter-spacing: -0.04em;
+          color: #d4ff5c;
+          text-transform: uppercase;
+          margin: 0;
+          font-style: italic;
+        }
+
+        .body-right {
+          display: flex;
+          flex-direction: column;
+          padding-top: 4px;
+        }
+
+        .body-para {
+          font-size: 15px;
+          font-weight: 300;
+          line-height: 1.85;
+          color: rgba(240,236,227,0.55);
+          margin: 0 0 20px;
+        }
+
+        .body-para strong {
+          color: #f0ece3;
+          font-weight: 600;
+        }
+
+        .va-card {
+          display: flex;
+          align-items: flex-start;
+          gap: 14px;
+          border-left: 2px solid rgba(212,255,92,0.3);
+          padding: 18px 20px;
+          margin-top: 12px;
+          background: rgba(212,255,92,0.03);
+        }
+
+        .va-icon {
+          width: 32px;
+          height: 32px;
+          background: rgba(240,236,227,0.06);
+          border: 1px solid rgba(240,236,227,0.1);
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          font-size: 14px;
+        }
+
+        .va-text {
+          font-size: 13.5px;
+          font-weight: 300;
+          line-height: 1.8;
+          color: rgba(240,236,227,0.45);
+          margin: 0;
+        }
+
+        .va-text span {
+          color: #f0ece3;
+          font-weight: 500;
+        }
+
+        .body-divider {
+          height: 1px;
+          background: rgba(255,255,255,0.07);
+          margin-top: 60px;
+        }
+
+        /* Tablet */
+        @media (max-width: 900px) {
+          #bodysection {
+            padding: 60px 32px !important;
           }
-          .nav-btn {
-            font-size: 9px;
-            padding: 9px 12px;
-            flex: 1 1 auto;
-            text-align: center;
+          .body-outer {
+            grid-template-columns: 1fr;
+            gap: 32px;
+          }
+          .body-left {
+            position: relative;
+            top: auto;
           }
         }
-      `}),(0,j.jsx)(`nav`,{className:`nav-wrap`,children:Qn.map(({label:t,id:n})=>(0,j.jsx)(`button`,{className:`nav-btn`,onClick:()=>e(n),children:t},n))})]})}var er=[{id:1,title:`Lab 3`,description:`A web development lab exercise showcasing core frontend fundamentals.`,url:`https://20114581m.github.io/lab3/`},{id:2,title:`Router & Form Handling`,description:`A combination of client-side routing and form handling with a book request flow.`,url:`https://20114581m.github.io/RouterAndFormHandlingCombination`},{id:3,title:`Feedback App`,description:`A simple feedback collection app built with React.`,url:`https://20114581m.github.io/feedbackApp/`}];function tr(){let[e,t]=(0,_.useState)(null);return(0,j.jsxs)(`div`,{id:`projectsection`,style:{width:`100%`,color:`#f0ece3`,fontFamily:`'Inter', 'Helvetica Neue', sans-serif`,padding:`80px 60px`,boxSizing:`border-box`},children:[(0,j.jsx)(`style`,{children:`
+
+        /* Mobile */
+        @media (max-width: 480px) {
+          #bodysection {
+            padding: 48px 20px !important;
+            margin-top: 48px !important;
+          }
+          .body-para {
+            font-size: 14px;
+          }
+          .va-text {
+            font-size: 13px;
+          }
+        }
+      `}),(0,j.jsxs)(`div`,{className:`body-outer`,children:[(0,j.jsxs)(`div`,{className:`body-left`,children:[(0,j.jsxs)(`div`,{className:`who-label`,children:[(0,j.jsx)(`span`,{className:`who-line`}),(0,j.jsx)(`span`,{className:`who-text`,children:`Who I Am`})]}),(0,j.jsx)(`p`,{className:`heading-about`,children:`About`}),(0,j.jsx)(`p`,{className:`heading-me`,children:`Me`})]}),(0,j.jsxs)(`div`,{className:`body-right`,children:[(0,j.jsxs)(`p`,{className:`body-para`,children:[`I'm `,(0,j.jsx)(`strong`,{children:`Marlon Ampoon`}),` — a Web Developer and Graphic Artist passionate about helping people and businesses succeed online. I build websites that don't just look great — they work smoothly, load fast, and make a real impact for the people behind them.`]}),(0,j.jsxs)(`p`,{className:`body-para`,children:[`I find genuine fulfillment in taking `,(0,j.jsx)(`strong`,{children:`technical challenges`}),` and transforming them into clean, functional solutions. Whether it's crafting a responsive frontend from scratch, designing a cohesive brand identity, or producing bold digital graphics — I bring both the`,` `,(0,j.jsx)(`strong`,{children:`engineering precision`}),` and the `,(0,j.jsx)(`strong`,{children:`visual sensibility`}),`.`]}),(0,j.jsx)(`p`,{className:`body-para`,children:`Every project I take on gets my full commitment — not just to meet the brief, but to exceed it. I believe great work comes from clear communication, attention to detail, and a genuine willingness to go the extra mile. If there's a way I can help you achieve your goals, I'd be honored to be a part of that journey.`}),(0,j.jsxs)(`div`,{className:`va-card`,children:[(0,j.jsx)(`div`,{className:`va-icon`,children:`💼`}),(0,j.jsxs)(`p`,{className:`va-text`,children:[`I also offer `,(0,j.jsx)(`span`,{children:`Web Operations Support`}),` as a secondary service — drawing on my background in site management, content updates, and performance monitoring to help clients maintain their digital presence and handle routine IT tasks when needed.`]})]})]})]}),(0,j.jsx)(`div`,{className:`body-divider`})]})}var $n=[{id:1,title:`Lab 3`,description:`A web development lab exercise showcasing core frontend fundamentals.`,url:`https://20114581m.github.io/lab3/`},{id:2,title:`Router & Form Handling`,description:`A combination of client-side routing and form handling with a book request flow.`,url:`https://20114581m.github.io/RouterAndFormHandlingCombination`},{id:3,title:`Feedback App`,description:`A simple feedback collection app built with React.`,url:`https://20114581m.github.io/feedbackApp/`}];function er(){let[e,t]=(0,_.useState)(null);return(0,j.jsxs)(`div`,{id:`projectsection`,style:{width:`100%`,color:`#f0ece3`,fontFamily:`'Inter', 'Helvetica Neue', sans-serif`,padding:`80px 60px`,boxSizing:`border-box`},children:[(0,j.jsx)(`style`,{children:`
         @media (max-width: 900px) {
           #projectsection {
             padding: 60px 32px !important;
@@ -174,7 +281,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
             grid-template-columns: 1fr !important;
           }
         }
-      `}),(0,j.jsxs)(`div`,{style:{maxWidth:`1200px`,margin:`0 auto`},children:[(0,j.jsxs)(`div`,{style:{marginBottom:`52px`},children:[(0,j.jsxs)(`div`,{style:{display:`flex`,alignItems:`center`,gap:`10px`,marginBottom:`14px`},children:[(0,j.jsx)(`span`,{style:{width:`28px`,height:`1px`,background:`rgba(212,255,92,0.5)`,display:`inline-block`,flexShrink:0}}),(0,j.jsx)(`span`,{style:{fontSize:`9px`,letterSpacing:`0.18em`,textTransform:`uppercase`,color:`rgba(240,236,227,0.35)`},children:`My Work`})]}),(0,j.jsxs)(`h2`,{style:{fontSize:`clamp(36px, 5vw, 60px)`,fontWeight:800,letterSpacing:`-0.04em`,lineHeight:.95,margin:0},children:[`Projects`,(0,j.jsx)(`br`,{}),(0,j.jsx)(`span`,{style:{color:`#d4ff5c`,fontStyle:`italic`},children:`Built.`})]})]}),(0,j.jsx)(`div`,{className:`proj-grid`,style:{display:`grid`,gridTemplateColumns:`repeat(auto-fit, minmax(280px, 1fr))`,gap:`20px`},children:er.map(({id:n,title:r,description:i,url:a})=>(0,j.jsxs)(`div`,{onClick:()=>window.open(a,`_blank`,`noopener,noreferrer`),onMouseEnter:()=>t(n),onMouseLeave:()=>t(null),style:{border:e===n?`1px solid rgba(212,255,92,0.35)`:`1px solid rgba(255,255,255,0.07)`,borderRadius:`6px`,overflow:`hidden`,cursor:`pointer`,transition:`border-color 0.2s`,background:`rgba(255,255,255,0.02)`},children:[(0,j.jsxs)(`div`,{style:{position:`relative`,width:`100%`,height:`220px`,overflow:`hidden`},children:[(0,j.jsx)(`iframe`,{src:a,title:r,style:{width:`150%`,height:`150%`,border:`none`,transform:`scale(0.667)`,transformOrigin:`top left`,pointerEvents:`none`},loading:`lazy`}),(0,j.jsx)(`div`,{style:{position:`absolute`,inset:0,background:e===n?`rgba(0,0,0,0.15)`:`rgba(0,0,0,0)`,transition:`background 0.2s`}}),e===n&&(0,j.jsx)(`div`,{style:{position:`absolute`,top:`50%`,left:`50%`,transform:`translate(-50%, -50%)`,background:`#d4ff5c`,color:`#0c0c0c`,fontSize:`9px`,fontWeight:700,letterSpacing:`0.14em`,textTransform:`uppercase`,padding:`8px 16px`,borderRadius:`2px`,whiteSpace:`nowrap`},children:`Open Project ↗`})]}),(0,j.jsxs)(`div`,{style:{padding:`20px`,borderTop:`1px solid rgba(255,255,255,0.06)`},children:[(0,j.jsxs)(`div`,{style:{display:`flex`,alignItems:`center`,justifyContent:`space-between`,marginBottom:`8px`},children:[(0,j.jsx)(`p`,{style:{fontSize:`14px`,fontWeight:700,letterSpacing:`-0.02em`,margin:0,color:`#f0ece3`},children:r}),(0,j.jsx)(`span`,{style:{fontSize:`8px`,letterSpacing:`0.14em`,textTransform:`uppercase`,color:`rgba(212,255,92,0.6)`,border:`1px solid rgba(212,255,92,0.15)`,padding:`3px 8px`,borderRadius:`999px`,flexShrink:0,marginLeft:`8px`},children:`Live`})]}),(0,j.jsx)(`p`,{style:{fontSize:`12px`,fontWeight:300,color:`rgba(240,236,227,0.4)`,lineHeight:1.7,margin:0},children:i})]})]},n))}),(0,j.jsx)(`div`,{style:{height:`1px`,background:`rgba(255,255,255,0.07)`,marginTop:`60px`}})]})]})}function nr(){let[e,t]=(0,_.useState)({fullName:``,phoneNumber:``,email:``,message:``}),[n,r]=(0,_.useState)(!1),i=e=>{let{name:n,value:r}=e.currentTarget;t(e=>({...e,[n]:r}))},a=async n=>{n.preventDefault(),r(!0);try{let n=await(await fetch(`http://localhost:5000/contact`,{method:`POST`,headers:{"Content-Type":`application/json`},body:JSON.stringify(e)})).json();alert(n.message),t({fullName:``,phoneNumber:``,email:``,message:``})}catch(e){console.error(e),alert(`Error submitting message. Please try again.`)}finally{r(!1)}},o={width:`100%`,padding:`12px 14px`,background:`rgba(255,255,255,0.04)`,border:`1px solid rgba(255,255,255,0.1)`,borderRadius:`4px`,color:`#f0ece3`,fontSize:`13px`,fontWeight:300,fontFamily:`'Inter', 'Helvetica Neue', sans-serif`,outline:`none`,boxSizing:`border-box`},s={fontSize:`9px`,fontWeight:600,letterSpacing:`0.16em`,textTransform:`uppercase`,color:`rgba(240,236,227,0.35)`,display:`block`,marginBottom:`8px`};return(0,j.jsxs)(`div`,{id:`Contactussection`,style:{width:`100%`,color:`#f0ece3`,fontFamily:`'Inter', 'Helvetica Neue', sans-serif`,padding:`80px 60px`,backgroundColor:`rgba(10, 10, 10, 0.80)`,boxSizing:`border-box`},children:[(0,j.jsx)(`style`,{children:`
+      `}),(0,j.jsxs)(`div`,{style:{maxWidth:`1200px`,margin:`0 auto`},children:[(0,j.jsxs)(`div`,{style:{marginBottom:`52px`},children:[(0,j.jsxs)(`div`,{style:{display:`flex`,alignItems:`center`,gap:`10px`,marginBottom:`14px`},children:[(0,j.jsx)(`span`,{style:{width:`28px`,height:`1px`,background:`rgba(212,255,92,0.5)`,display:`inline-block`,flexShrink:0}}),(0,j.jsx)(`span`,{style:{fontSize:`9px`,letterSpacing:`0.18em`,textTransform:`uppercase`,color:`rgba(240,236,227,0.35)`},children:`My Work`})]}),(0,j.jsxs)(`h2`,{style:{fontSize:`clamp(36px, 5vw, 60px)`,fontWeight:800,letterSpacing:`-0.04em`,lineHeight:.95,margin:0},children:[`Projects`,(0,j.jsx)(`br`,{}),(0,j.jsx)(`span`,{style:{color:`#d4ff5c`,fontStyle:`italic`},children:`Built.`})]})]}),(0,j.jsx)(`div`,{className:`proj-grid`,style:{display:`grid`,gridTemplateColumns:`repeat(auto-fit, minmax(280px, 1fr))`,gap:`20px`},children:$n.map(({id:n,title:r,description:i,url:a})=>(0,j.jsxs)(`div`,{onClick:()=>window.open(a,`_blank`,`noopener,noreferrer`),onMouseEnter:()=>t(n),onMouseLeave:()=>t(null),style:{border:e===n?`1px solid rgba(212,255,92,0.35)`:`1px solid rgba(255,255,255,0.07)`,borderRadius:`6px`,overflow:`hidden`,cursor:`pointer`,transition:`border-color 0.2s`,background:`rgba(255,255,255,0.02)`},children:[(0,j.jsxs)(`div`,{style:{position:`relative`,width:`100%`,height:`220px`,overflow:`hidden`},children:[(0,j.jsx)(`iframe`,{src:a,title:r,style:{width:`150%`,height:`150%`,border:`none`,transform:`scale(0.667)`,transformOrigin:`top left`,pointerEvents:`none`},loading:`lazy`}),(0,j.jsx)(`div`,{style:{position:`absolute`,inset:0,background:e===n?`rgba(0,0,0,0.15)`:`rgba(0,0,0,0)`,transition:`background 0.2s`}}),e===n&&(0,j.jsx)(`div`,{style:{position:`absolute`,top:`50%`,left:`50%`,transform:`translate(-50%, -50%)`,background:`#d4ff5c`,color:`#0c0c0c`,fontSize:`9px`,fontWeight:700,letterSpacing:`0.14em`,textTransform:`uppercase`,padding:`8px 16px`,borderRadius:`2px`,whiteSpace:`nowrap`},children:`Open Project ↗`})]}),(0,j.jsxs)(`div`,{style:{padding:`20px`,borderTop:`1px solid rgba(255,255,255,0.06)`},children:[(0,j.jsxs)(`div`,{style:{display:`flex`,alignItems:`center`,justifyContent:`space-between`,marginBottom:`8px`},children:[(0,j.jsx)(`p`,{style:{fontSize:`14px`,fontWeight:700,letterSpacing:`-0.02em`,margin:0,color:`#f0ece3`},children:r}),(0,j.jsx)(`span`,{style:{fontSize:`8px`,letterSpacing:`0.14em`,textTransform:`uppercase`,color:`rgba(212,255,92,0.6)`,border:`1px solid rgba(212,255,92,0.15)`,padding:`3px 8px`,borderRadius:`999px`,flexShrink:0,marginLeft:`8px`},children:`Live`})]}),(0,j.jsx)(`p`,{style:{fontSize:`12px`,fontWeight:300,color:`rgba(240,236,227,0.4)`,lineHeight:1.7,margin:0},children:i})]})]},n))}),(0,j.jsx)(`div`,{style:{height:`1px`,background:`rgba(255,255,255,0.07)`,marginTop:`60px`}})]})]})}function tr(){let[e,t]=(0,_.useState)({fullName:``,phoneNumber:``,email:``,message:``}),[n,r]=(0,_.useState)(!1),i=e=>{let{name:n,value:r}=e.currentTarget;t(e=>({...e,[n]:r}))},a=async n=>{n.preventDefault(),r(!0);try{let n=await(await fetch(`http://localhost:5000/contact`,{method:`POST`,headers:{"Content-Type":`application/json`},body:JSON.stringify(e)})).json();alert(n.message),t({fullName:``,phoneNumber:``,email:``,message:``})}catch(e){console.error(e),alert(`Error submitting message. Please try again.`)}finally{r(!1)}},o={width:`100%`,padding:`12px 14px`,background:`rgba(255,255,255,0.04)`,border:`1px solid rgba(255,255,255,0.1)`,borderRadius:`4px`,color:`#f0ece3`,fontSize:`13px`,fontWeight:300,fontFamily:`'Inter', 'Helvetica Neue', sans-serif`,outline:`none`,boxSizing:`border-box`},s={fontSize:`9px`,fontWeight:600,letterSpacing:`0.16em`,textTransform:`uppercase`,color:`rgba(240,236,227,0.35)`,display:`block`,marginBottom:`8px`};return(0,j.jsxs)(`div`,{id:`Contactussection`,style:{width:`100%`,color:`#f0ece3`,fontFamily:`'Inter', 'Helvetica Neue', sans-serif`,padding:`80px 60px`,backgroundColor:`rgba(10, 10, 10, 0.80)`,boxSizing:`border-box`},children:[(0,j.jsx)(`style`,{children:`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap');
 
         .ct-input:focus {
@@ -227,7 +334,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
             grid-template-columns: 1fr !important;
           }
         }
-      `}),(0,j.jsxs)(`div`,{style:{maxWidth:`1200px`,margin:`0 auto`},children:[(0,j.jsxs)(`div`,{className:`ct-outer`,children:[(0,j.jsxs)(`div`,{className:`ct-left`,children:[(0,j.jsxs)(`div`,{style:{display:`flex`,alignItems:`center`,gap:`10px`,marginBottom:`14px`},children:[(0,j.jsx)(`span`,{style:{width:`28px`,height:`1px`,background:`rgba(212,255,92,0.5)`,display:`inline-block`,flexShrink:0}}),(0,j.jsx)(`span`,{style:{fontSize:`9px`,letterSpacing:`0.18em`,textTransform:`uppercase`,color:`rgba(240,236,227,0.35)`},children:`Get In Touch`})]}),(0,j.jsxs)(`h2`,{style:{fontSize:`clamp(36px, 4.5vw, 68px)`,fontWeight:800,lineHeight:.95,letterSpacing:`-0.04em`,margin:`0 0 28px`},children:[`Contact`,(0,j.jsx)(`br`,{}),(0,j.jsx)(`span`,{style:{color:`#d4ff5c`,fontStyle:`italic`},children:`Me.`})]}),(0,j.jsx)(`p`,{style:{fontSize:`13px`,fontWeight:300,color:`rgba(240,236,227,0.38)`,lineHeight:1.85,margin:`0 0 32px`,maxWidth:`300px`},children:`Have a project in mind or just want to say hello? Fill out the form and I'll get back to you as soon as possible.`}),(0,j.jsx)(`div`,{style:{display:`flex`,flexDirection:`column`,gap:`14px`},children:[{icon:`📧`,label:`Email`,value:`servicesjmseptember@gmail.com`},{icon:`📍`,label:`Location`,value:`Baguio City, Philippines`}].map(({icon:e,label:t,value:n})=>(0,j.jsxs)(`div`,{style:{display:`flex`,alignItems:`center`,gap:`12px`},children:[(0,j.jsx)(`span`,{style:{fontSize:`13px`},children:e}),(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`p`,{style:{fontSize:`8.5px`,letterSpacing:`0.14em`,textTransform:`uppercase`,color:`rgba(240,236,227,0.25)`,margin:`0 0 2px`},children:t}),(0,j.jsx)(`p`,{style:{fontSize:`12px`,fontWeight:300,color:`rgba(240,236,227,0.5)`,margin:0,wordBreak:`break-all`},children:n})]})]},t))})]}),(0,j.jsxs)(`form`,{onSubmit:a,style:{display:`flex`,flexDirection:`column`,gap:`20px`,paddingTop:`4px`},children:[(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`label`,{style:s,children:`Full Name`}),(0,j.jsx)(`input`,{required:!0,type:`text`,name:`fullName`,value:e.fullName,onChange:i,placeholder:`Juan dela Cruz`,style:o,className:`ct-input`})]}),(0,j.jsxs)(`div`,{className:`ct-phone-row`,children:[(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`label`,{style:s,children:`Phone Number`}),(0,j.jsx)(`input`,{required:!0,type:`tel`,name:`phoneNumber`,value:e.phoneNumber,onChange:i,placeholder:`+63 912 345 6789`,style:o,className:`ct-input`})]}),(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`label`,{style:s,children:`Email`}),(0,j.jsx)(`input`,{required:!0,type:`email`,name:`email`,value:e.email,onChange:i,placeholder:`juan@email.com`,style:o,className:`ct-input`})]})]}),(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`label`,{style:s,children:`Message`}),(0,j.jsx)(`textarea`,{required:!0,name:`message`,value:e.message,onChange:i,placeholder:`Tell me about your project or inquiry...`,rows:5,style:{...o,resize:`vertical`,lineHeight:1.7},className:`ct-input`})]}),(0,j.jsx)(`button`,{type:`submit`,disabled:n,style:{marginTop:`4px`,padding:`13px 28px`,background:n?`rgba(212,255,92,0.5)`:`#d4ff5c`,color:`#0c0c0c`,border:`none`,borderRadius:`2px`,fontSize:`10px`,fontWeight:700,letterSpacing:`0.14em`,textTransform:`uppercase`,cursor:n?`not-allowed`:`pointer`,fontFamily:`'Inter', 'Helvetica Neue', sans-serif`,alignSelf:`flex-start`,transition:`opacity 0.2s`},onMouseEnter:e=>{n||(e.currentTarget.style.opacity=`0.75`)},onMouseLeave:e=>{e.currentTarget.style.opacity=`1`},children:n?`Sending...`:`Send Message ↗`})]})]}),(0,j.jsx)(`div`,{style:{height:`1px`,background:`rgba(255,255,255,0.07)`,marginTop:`60px`}})]})]})}var rr=[{label:`About Me`,id:`bodysection`},{label:`Projects`,id:`projectsection`},{label:`Contact Me`,id:`Contactussection`}];function ir(){let e=e=>{let t=document.getElementById(e);t&&t.scrollIntoView({behavior:`smooth`})};return(0,j.jsxs)(`footer`,{style:{width:`100%`,color:`#f0ece3`,fontFamily:`'Inter', 'Helvetica Neue', sans-serif`},children:[(0,j.jsx)(`style`,{children:`
+      `}),(0,j.jsxs)(`div`,{style:{maxWidth:`1200px`,margin:`0 auto`},children:[(0,j.jsxs)(`div`,{className:`ct-outer`,children:[(0,j.jsxs)(`div`,{className:`ct-left`,children:[(0,j.jsxs)(`div`,{style:{display:`flex`,alignItems:`center`,gap:`10px`,marginBottom:`14px`},children:[(0,j.jsx)(`span`,{style:{width:`28px`,height:`1px`,background:`rgba(212,255,92,0.5)`,display:`inline-block`,flexShrink:0}}),(0,j.jsx)(`span`,{style:{fontSize:`9px`,letterSpacing:`0.18em`,textTransform:`uppercase`,color:`rgba(240,236,227,0.35)`},children:`Get In Touch`})]}),(0,j.jsxs)(`h2`,{style:{fontSize:`clamp(36px, 4.5vw, 68px)`,fontWeight:800,lineHeight:.95,letterSpacing:`-0.04em`,margin:`0 0 28px`},children:[`Contact`,(0,j.jsx)(`br`,{}),(0,j.jsx)(`span`,{style:{color:`#d4ff5c`,fontStyle:`italic`},children:`Me.`})]}),(0,j.jsx)(`p`,{style:{fontSize:`13px`,fontWeight:300,color:`rgba(240,236,227,0.38)`,lineHeight:1.85,margin:`0 0 32px`,maxWidth:`300px`},children:`Have a project in mind or just want to say hello? Fill out the form and I'll get back to you as soon as possible.`}),(0,j.jsx)(`div`,{style:{display:`flex`,flexDirection:`column`,gap:`14px`},children:[{icon:`📧`,label:`Email`,value:`servicesjmseptember@gmail.com`},{icon:`📍`,label:`Location`,value:`Baguio City, Philippines`}].map(({icon:e,label:t,value:n})=>(0,j.jsxs)(`div`,{style:{display:`flex`,alignItems:`center`,gap:`12px`},children:[(0,j.jsx)(`span`,{style:{fontSize:`13px`},children:e}),(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`p`,{style:{fontSize:`8.5px`,letterSpacing:`0.14em`,textTransform:`uppercase`,color:`rgba(240,236,227,0.25)`,margin:`0 0 2px`},children:t}),(0,j.jsx)(`p`,{style:{fontSize:`12px`,fontWeight:300,color:`rgba(240,236,227,0.5)`,margin:0,wordBreak:`break-all`},children:n})]})]},t))})]}),(0,j.jsxs)(`form`,{onSubmit:a,style:{display:`flex`,flexDirection:`column`,gap:`20px`,paddingTop:`4px`},children:[(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`label`,{style:s,children:`Full Name`}),(0,j.jsx)(`input`,{required:!0,type:`text`,name:`fullName`,value:e.fullName,onChange:i,placeholder:`Juan dela Cruz`,style:o,className:`ct-input`})]}),(0,j.jsxs)(`div`,{className:`ct-phone-row`,children:[(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`label`,{style:s,children:`Phone Number`}),(0,j.jsx)(`input`,{required:!0,type:`tel`,name:`phoneNumber`,value:e.phoneNumber,onChange:i,placeholder:`+63 912 345 6789`,style:o,className:`ct-input`})]}),(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`label`,{style:s,children:`Email`}),(0,j.jsx)(`input`,{required:!0,type:`email`,name:`email`,value:e.email,onChange:i,placeholder:`juan@email.com`,style:o,className:`ct-input`})]})]}),(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`label`,{style:s,children:`Message`}),(0,j.jsx)(`textarea`,{required:!0,name:`message`,value:e.message,onChange:i,placeholder:`Tell me about your project or inquiry...`,rows:5,style:{...o,resize:`vertical`,lineHeight:1.7},className:`ct-input`})]}),(0,j.jsx)(`button`,{type:`submit`,disabled:n,style:{marginTop:`4px`,padding:`13px 28px`,background:n?`rgba(212,255,92,0.5)`:`#d4ff5c`,color:`#0c0c0c`,border:`none`,borderRadius:`2px`,fontSize:`10px`,fontWeight:700,letterSpacing:`0.14em`,textTransform:`uppercase`,cursor:n?`not-allowed`:`pointer`,fontFamily:`'Inter', 'Helvetica Neue', sans-serif`,alignSelf:`flex-start`,transition:`opacity 0.2s`},onMouseEnter:e=>{n||(e.currentTarget.style.opacity=`0.75`)},onMouseLeave:e=>{e.currentTarget.style.opacity=`1`},children:n?`Sending...`:`Send Message ↗`})]})]}),(0,j.jsx)(`div`,{style:{height:`1px`,background:`rgba(255,255,255,0.07)`,marginTop:`60px`}})]})]})}var nr=[{label:`About Me`,id:`bodysection`},{label:`Projects`,id:`projectsection`},{label:`Contact Me`,id:`Contactussection`}];function rr(){let e=e=>{let t=document.getElementById(e);t&&t.scrollIntoView({behavior:`smooth`})};return(0,j.jsxs)(`footer`,{style:{width:`100%`,color:`#f0ece3`,fontFamily:`'Inter', 'Helvetica Neue', sans-serif`},children:[(0,j.jsx)(`style`,{children:`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap');
 
         .ft-wrap {
@@ -385,10 +492,10 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
             gap: 10px;
           }
         }
-      `}),(0,j.jsxs)(`div`,{className:`ft-wrap`,children:[(0,j.jsxs)(`div`,{className:`ft-top-bar`,children:[(0,j.jsxs)(`div`,{className:`ft-identity`,children:[(0,j.jsx)(`div`,{className:`ft-avatar`,children:(0,j.jsx)(`img`,{src:qn,alt:`Marlon Ampoon`})}),(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`p`,{className:`ft-name`,children:`Marlon Ampoon`}),(0,j.jsx)(`div`,{className:`ft-roles`,children:[`Web Developer`,`Graphic Artist`,`UI Designer`].map(e=>(0,j.jsx)(`span`,{className:`ft-role-pill`,children:e},e))})]})]}),(0,j.jsx)(`nav`,{className:`ft-nav`,children:rr.map(({label:t,id:n})=>(0,j.jsx)(`button`,{className:`ft-nav-btn`,onClick:()=>e(n),children:t},n))})]}),(0,j.jsxs)(`div`,{className:`ft-bottom-bar`,children:[(0,j.jsxs)(`p`,{className:`ft-copy`,children:[`© `,new Date().getFullYear(),` `,(0,j.jsx)(`span`,{children:`Marlon Ampoon`}),`. All rights reserved.`]}),(0,j.jsx)(`span`,{className:`ft-badge`,children:`Designed & Built by Marlon`})]})]})]})}function ar(){return(0,j.jsxs)(`div`,{style:{minHeight:`100vh`,width:`100%`,color:`#fff`,backgroundColor:`#0a0a0f`,backgroundImage:`
+      `}),(0,j.jsxs)(`div`,{className:`ft-wrap`,children:[(0,j.jsxs)(`div`,{className:`ft-top-bar`,children:[(0,j.jsxs)(`div`,{className:`ft-identity`,children:[(0,j.jsx)(`div`,{className:`ft-avatar`,children:(0,j.jsx)(`img`,{src:qn,alt:`Marlon Ampoon`})}),(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`p`,{className:`ft-name`,children:`Marlon Ampoon`}),(0,j.jsx)(`div`,{className:`ft-roles`,children:[`Web Developer`,`Graphic Artist`,`UI Designer`].map(e=>(0,j.jsx)(`span`,{className:`ft-role-pill`,children:e},e))})]})]}),(0,j.jsx)(`nav`,{className:`ft-nav`,children:nr.map(({label:t,id:n})=>(0,j.jsx)(`button`,{className:`ft-nav-btn`,onClick:()=>e(n),children:t},n))})]}),(0,j.jsxs)(`div`,{className:`ft-bottom-bar`,children:[(0,j.jsxs)(`p`,{className:`ft-copy`,children:[`© `,new Date().getFullYear(),` `,(0,j.jsx)(`span`,{children:`Marlon Ampoon`}),`. All rights reserved.`]}),(0,j.jsx)(`span`,{className:`ft-badge`,children:`Designed & Built by Marlon`})]})]})]})}function ir(){return(0,j.jsxs)(`div`,{style:{minHeight:`100vh`,width:`100%`,color:`#fff`,backgroundColor:`#0a0a0f`,backgroundImage:`
             linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
             linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)
-          `},children:[(0,j.jsx)(Yn,{}),(0,j.jsx)(Zn,{}),(0,j.jsx)(`div`,{id:`bodysection`,children:(0,j.jsx)($n,{})}),(0,j.jsx)(`div`,{id:`projectsection`,children:(0,j.jsx)(tr,{})}),(0,j.jsx)(`div`,{id:`Contactussection`,children:(0,j.jsx)(nr,{})}),(0,j.jsx)(`div`,{id:`footersection`,children:(0,j.jsx)(ir,{})})]})}function or(){let[e,t]=(0,_.useState)({username:``,password:``}),[n,r]=(0,_.useState)(``),i=ft();return(0,_.useEffect)(()=>{sessionStorage.getItem(`user`)===`MarlonA`&&i(`/contact-messages`)},[]),(0,j.jsxs)(`div`,{style:{minHeight:`100vh`,display:`flex`,alignItems:`center`,justifyContent:`center`,fontFamily:`'Inter', 'Helvetica Neue', sans-serif`,color:`#f0ece3`,padding:`24px`,backgroundColor:`#0a0a0f`,backgroundImage:`
+          `},children:[(0,j.jsx)(Yn,{}),(0,j.jsx)(Zn,{}),(0,j.jsx)(`div`,{id:`bodysection`,children:(0,j.jsx)(Qn,{})}),(0,j.jsx)(`div`,{id:`projectsection`,children:(0,j.jsx)(er,{})}),(0,j.jsx)(`div`,{id:`Contactussection`,children:(0,j.jsx)(tr,{})}),(0,j.jsx)(`div`,{id:`footersection`,children:(0,j.jsx)(rr,{})})]})}function ar(){let[e,t]=(0,_.useState)({username:``,password:``}),[n,r]=(0,_.useState)(``),i=ft();return(0,_.useEffect)(()=>{sessionStorage.getItem(`user`)===`MarlonA`&&i(`/contact-messages`)},[]),(0,j.jsxs)(`div`,{style:{minHeight:`100vh`,display:`flex`,alignItems:`center`,justifyContent:`center`,fontFamily:`'Inter', 'Helvetica Neue', sans-serif`,color:`#f0ece3`,padding:`24px`,backgroundColor:`#0a0a0f`,backgroundImage:`
             linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
             linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)
           `},children:[(0,j.jsx)(`style`,{children:`
@@ -449,7 +556,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           border-color: rgba(255,255,255,0.25);
           color: rgba(240,236,227,0.7);
         }
-      `}),(0,j.jsxs)(`div`,{style:{width:`100%`,maxWidth:`380px`,border:`1px solid rgba(255,255,255,0.07)`,borderRadius:`8px`,padding:`40px 36px`,background:`rgba(255,255,255,0.02)`},children:[(0,j.jsxs)(`div`,{style:{marginBottom:`32px`},children:[(0,j.jsxs)(`div`,{style:{display:`flex`,alignItems:`center`,gap:`10px`,marginBottom:`12px`},children:[(0,j.jsx)(`span`,{style:{width:`20px`,height:`1px`,background:`rgba(212,255,92,0.5)`,display:`inline-block`}}),(0,j.jsx)(`span`,{style:{fontSize:`9px`,letterSpacing:`0.18em`,textTransform:`uppercase`,color:`rgba(240,236,227,0.35)`},children:`Admin`})]}),(0,j.jsxs)(`h1`,{style:{fontSize:`32px`,fontWeight:800,letterSpacing:`-0.04em`,lineHeight:1,margin:0},children:[`Welcome`,(0,j.jsx)(`br`,{}),(0,j.jsx)(`span`,{style:{color:`#d4ff5c`,fontStyle:`italic`},children:`Back.`})]})]}),(0,j.jsxs)(`form`,{onSubmit:t=>{t.preventDefault(),e.username===`MarlonA`&&e.password===`ubaguio2026`?(sessionStorage.setItem(`user`,e.username),i(`/contact-messages`)):r(`Invalid username or password.`)},style:{display:`flex`,flexDirection:`column`,gap:`16px`},children:[(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`label`,{style:{fontSize:`9px`,fontWeight:600,letterSpacing:`0.16em`,textTransform:`uppercase`,color:`rgba(240,236,227,0.35)`,display:`block`,marginBottom:`8px`},children:`Username`}),(0,j.jsx)(`input`,{required:!0,type:`text`,placeholder:`Enter username`,value:e.username,onChange:e=>t(t=>({...t,username:e.target.value})),className:`login-input`})]}),(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`label`,{style:{fontSize:`9px`,fontWeight:600,letterSpacing:`0.16em`,textTransform:`uppercase`,color:`rgba(240,236,227,0.35)`,display:`block`,marginBottom:`8px`},children:`Password`}),(0,j.jsx)(`input`,{required:!0,type:`password`,placeholder:`Enter password`,value:e.password,onChange:e=>t(t=>({...t,password:e.target.value})),className:`login-input`})]}),n&&(0,j.jsx)(`p`,{style:{fontSize:`11px`,color:`#ff6b6b`,margin:0,letterSpacing:`0.02em`},children:n}),(0,j.jsx)(`button`,{type:`submit`,className:`login-btn`,style:{marginTop:`4px`},children:`Log In ↗`}),(0,j.jsx)(`button`,{type:`button`,className:`cancel-btn`,onClick:()=>i(`/`),children:`Cancel`})]})]})]})}function sr(){let[e,t]=(0,_.useState)([]),[n,r]=(0,_.useState)(!0),i=ft();(0,_.useEffect)(()=>{if(sessionStorage.getItem(`user`)!==`MarlonA`){i(`/login`);return}a()},[]);let a=async()=>{try{t(await(await fetch(`http://localhost:5000/contact`)).json())}catch(e){console.error(e)}finally{r(!1)}},o=async e=>{if(confirm(`Delete this message?`))try{await fetch(`http://localhost:5000/contact/${e}`,{method:`DELETE`}),t(t=>t.filter(t=>t._id!==e))}catch(e){console.error(e)}};return(0,j.jsxs)(`div`,{style:{minHeight:`100vh`,fontFamily:`'Inter', 'Helvetica Neue', sans-serif`,color:`#f0ece3`,padding:`48px 40px`,backgroundColor:`#0a0a0f`,backgroundImage:`
+      `}),(0,j.jsxs)(`div`,{style:{width:`100%`,maxWidth:`380px`,border:`1px solid rgba(255,255,255,0.07)`,borderRadius:`8px`,padding:`40px 36px`,background:`rgba(255,255,255,0.02)`},children:[(0,j.jsxs)(`div`,{style:{marginBottom:`32px`},children:[(0,j.jsxs)(`div`,{style:{display:`flex`,alignItems:`center`,gap:`10px`,marginBottom:`12px`},children:[(0,j.jsx)(`span`,{style:{width:`20px`,height:`1px`,background:`rgba(212,255,92,0.5)`,display:`inline-block`}}),(0,j.jsx)(`span`,{style:{fontSize:`9px`,letterSpacing:`0.18em`,textTransform:`uppercase`,color:`rgba(240,236,227,0.35)`},children:`Admin`})]}),(0,j.jsxs)(`h1`,{style:{fontSize:`32px`,fontWeight:800,letterSpacing:`-0.04em`,lineHeight:1,margin:0},children:[`Welcome`,(0,j.jsx)(`br`,{}),(0,j.jsx)(`span`,{style:{color:`#d4ff5c`,fontStyle:`italic`},children:`Back.`})]})]}),(0,j.jsxs)(`form`,{onSubmit:t=>{t.preventDefault(),e.username===`MarlonA`&&e.password===`ubaguio2026`?(sessionStorage.setItem(`user`,e.username),i(`/contact-messages`)):r(`Invalid username or password.`)},style:{display:`flex`,flexDirection:`column`,gap:`16px`},children:[(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`label`,{style:{fontSize:`9px`,fontWeight:600,letterSpacing:`0.16em`,textTransform:`uppercase`,color:`rgba(240,236,227,0.35)`,display:`block`,marginBottom:`8px`},children:`Username`}),(0,j.jsx)(`input`,{required:!0,type:`text`,placeholder:`Enter username`,value:e.username,onChange:e=>t(t=>({...t,username:e.target.value})),className:`login-input`})]}),(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`label`,{style:{fontSize:`9px`,fontWeight:600,letterSpacing:`0.16em`,textTransform:`uppercase`,color:`rgba(240,236,227,0.35)`,display:`block`,marginBottom:`8px`},children:`Password`}),(0,j.jsx)(`input`,{required:!0,type:`password`,placeholder:`Enter password`,value:e.password,onChange:e=>t(t=>({...t,password:e.target.value})),className:`login-input`})]}),n&&(0,j.jsx)(`p`,{style:{fontSize:`11px`,color:`#ff6b6b`,margin:0,letterSpacing:`0.02em`},children:n}),(0,j.jsx)(`button`,{type:`submit`,className:`login-btn`,style:{marginTop:`4px`},children:`Log In ↗`}),(0,j.jsx)(`button`,{type:`button`,className:`cancel-btn`,onClick:()=>i(`/`),children:`Cancel`})]})]})]})}function or(){let[e,t]=(0,_.useState)([]),[n,r]=(0,_.useState)(!0),i=ft();(0,_.useEffect)(()=>{if(sessionStorage.getItem(`user`)!==`MarlonA`){i(`/login`);return}a()},[]);let a=async()=>{try{t(await(await fetch(`http://localhost:5000/contact`)).json())}catch(e){console.error(e)}finally{r(!1)}},o=async e=>{if(confirm(`Delete this message?`))try{await fetch(`http://localhost:5000/contact/${e}`,{method:`DELETE`}),t(t=>t.filter(t=>t._id!==e))}catch(e){console.error(e)}};return(0,j.jsxs)(`div`,{style:{minHeight:`100vh`,fontFamily:`'Inter', 'Helvetica Neue', sans-serif`,color:`#f0ece3`,padding:`48px 40px`,backgroundColor:`#0a0a0f`,backgroundImage:`
             linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
             linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)
           `},children:[(0,j.jsx)(`style`,{children:`
@@ -507,4 +614,4 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
             padding: 8px 0;
           }
         }
-      `}),(0,j.jsxs)(`div`,{style:{maxWidth:`1100px`,margin:`0 auto`},children:[(0,j.jsxs)(`div`,{style:{display:`flex`,alignItems:`flex-end`,justifyContent:`space-between`,marginBottom:`40px`,flexWrap:`wrap`,gap:`16px`},children:[(0,j.jsxs)(`div`,{children:[(0,j.jsxs)(`div`,{style:{display:`flex`,alignItems:`center`,gap:`10px`,marginBottom:`10px`},children:[(0,j.jsx)(`span`,{style:{width:`20px`,height:`1px`,background:`rgba(212,255,92,0.5)`,display:`inline-block`}}),(0,j.jsx)(`span`,{style:{fontSize:`9px`,letterSpacing:`0.18em`,textTransform:`uppercase`,color:`rgba(240,236,227,0.35)`},children:`Admin`})]}),(0,j.jsxs)(`h1`,{style:{fontSize:`32px`,fontWeight:800,letterSpacing:`-0.04em`,margin:0},children:[`Contact `,(0,j.jsx)(`span`,{style:{color:`#d4ff5c`,fontStyle:`italic`},children:`Messages`})]})]}),(0,j.jsx)(`button`,{onClick:()=>{sessionStorage.removeItem(`user`),i(`/login`)},style:{fontSize:`9px`,fontWeight:700,letterSpacing:`0.14em`,textTransform:`uppercase`,color:`#0c0c0c`,background:`#d4ff5c`,border:`none`,borderRadius:`2px`,padding:`10px 20px`,cursor:`pointer`,fontFamily:`inherit`,transition:`opacity 0.2s`},onMouseEnter:e=>e.currentTarget.style.opacity=`0.75`,onMouseLeave:e=>e.currentTarget.style.opacity=`1`,children:`Log Out`})]}),n?(0,j.jsx)(`p`,{style:{fontSize:`13px`,color:`rgba(240,236,227,0.3)`},children:`Loading...`}):e.length===0?(0,j.jsx)(`p`,{style:{fontSize:`13px`,color:`rgba(240,236,227,0.3)`},children:`No messages yet.`}):(0,j.jsx)(`div`,{style:{border:`1px solid rgba(255,255,255,0.07)`,borderRadius:`6px`,overflow:`hidden`},children:(0,j.jsxs)(`table`,{className:`cm-table`,children:[(0,j.jsx)(`thead`,{children:(0,j.jsxs)(`tr`,{children:[(0,j.jsx)(`th`,{children:`#`}),(0,j.jsx)(`th`,{children:`Full Name`}),(0,j.jsx)(`th`,{children:`Phone`}),(0,j.jsx)(`th`,{children:`Email`}),(0,j.jsx)(`th`,{children:`Message`}),(0,j.jsx)(`th`,{children:`Date`}),(0,j.jsx)(`th`,{})]})}),(0,j.jsx)(`tbody`,{children:e.map((e,t)=>(0,j.jsxs)(`tr`,{children:[(0,j.jsx)(`td`,{style:{color:`rgba(240,236,227,0.2)`,fontSize:`11px`},children:t+1}),(0,j.jsx)(`td`,{style:{color:`#f0ece3`,fontWeight:400},children:e.fullName}),(0,j.jsx)(`td`,{children:e.phoneNumber}),(0,j.jsx)(`td`,{children:e.email}),(0,j.jsx)(`td`,{children:e.message}),(0,j.jsx)(`td`,{style:{whiteSpace:`nowrap`,fontSize:`11px`},children:e.createdAt?new Date(e.createdAt).toLocaleDateString():`—`}),(0,j.jsx)(`td`,{children:(0,j.jsx)(`button`,{className:`del-btn`,onClick:()=>o(e._id),children:`Delete`})})]},e._id))})]})})]})]})}function cr(){return(0,j.jsx)(En,{basename:`/Marlon`,children:(0,j.jsxs)(Rt,{children:[(0,j.jsx)(It,{path:`/`,element:(0,j.jsx)(ar,{})}),(0,j.jsx)(It,{path:`/login`,element:(0,j.jsx)(or,{})}),(0,j.jsx)(It,{path:`/contact-messages`,element:(0,j.jsx)(sr,{})})]})})}(0,v.createRoot)(document.getElementById(`root`)).render((0,j.jsx)(_.StrictMode,{children:(0,j.jsx)(cr,{})}));
+      `}),(0,j.jsxs)(`div`,{style:{maxWidth:`1100px`,margin:`0 auto`},children:[(0,j.jsxs)(`div`,{style:{display:`flex`,alignItems:`flex-end`,justifyContent:`space-between`,marginBottom:`40px`,flexWrap:`wrap`,gap:`16px`},children:[(0,j.jsxs)(`div`,{children:[(0,j.jsxs)(`div`,{style:{display:`flex`,alignItems:`center`,gap:`10px`,marginBottom:`10px`},children:[(0,j.jsx)(`span`,{style:{width:`20px`,height:`1px`,background:`rgba(212,255,92,0.5)`,display:`inline-block`}}),(0,j.jsx)(`span`,{style:{fontSize:`9px`,letterSpacing:`0.18em`,textTransform:`uppercase`,color:`rgba(240,236,227,0.35)`},children:`Admin`})]}),(0,j.jsxs)(`h1`,{style:{fontSize:`32px`,fontWeight:800,letterSpacing:`-0.04em`,margin:0},children:[`Contact `,(0,j.jsx)(`span`,{style:{color:`#d4ff5c`,fontStyle:`italic`},children:`Messages`})]})]}),(0,j.jsx)(`button`,{onClick:()=>{sessionStorage.removeItem(`user`),i(`/login`)},style:{fontSize:`9px`,fontWeight:700,letterSpacing:`0.14em`,textTransform:`uppercase`,color:`#0c0c0c`,background:`#d4ff5c`,border:`none`,borderRadius:`2px`,padding:`10px 20px`,cursor:`pointer`,fontFamily:`inherit`,transition:`opacity 0.2s`},onMouseEnter:e=>e.currentTarget.style.opacity=`0.75`,onMouseLeave:e=>e.currentTarget.style.opacity=`1`,children:`Log Out`})]}),n?(0,j.jsx)(`p`,{style:{fontSize:`13px`,color:`rgba(240,236,227,0.3)`},children:`Loading...`}):e.length===0?(0,j.jsx)(`p`,{style:{fontSize:`13px`,color:`rgba(240,236,227,0.3)`},children:`No messages yet.`}):(0,j.jsx)(`div`,{style:{border:`1px solid rgba(255,255,255,0.07)`,borderRadius:`6px`,overflow:`hidden`},children:(0,j.jsxs)(`table`,{className:`cm-table`,children:[(0,j.jsx)(`thead`,{children:(0,j.jsxs)(`tr`,{children:[(0,j.jsx)(`th`,{children:`#`}),(0,j.jsx)(`th`,{children:`Full Name`}),(0,j.jsx)(`th`,{children:`Phone`}),(0,j.jsx)(`th`,{children:`Email`}),(0,j.jsx)(`th`,{children:`Message`}),(0,j.jsx)(`th`,{children:`Date`}),(0,j.jsx)(`th`,{})]})}),(0,j.jsx)(`tbody`,{children:e.map((e,t)=>(0,j.jsxs)(`tr`,{children:[(0,j.jsx)(`td`,{style:{color:`rgba(240,236,227,0.2)`,fontSize:`11px`},children:t+1}),(0,j.jsx)(`td`,{style:{color:`#f0ece3`,fontWeight:400},children:e.fullName}),(0,j.jsx)(`td`,{children:e.phoneNumber}),(0,j.jsx)(`td`,{children:e.email}),(0,j.jsx)(`td`,{children:e.message}),(0,j.jsx)(`td`,{style:{whiteSpace:`nowrap`,fontSize:`11px`},children:e.createdAt?new Date(e.createdAt).toLocaleDateString():`—`}),(0,j.jsx)(`td`,{children:(0,j.jsx)(`button`,{className:`del-btn`,onClick:()=>o(e._id),children:`Delete`})})]},e._id))})]})})]})]})}function sr(){return(0,j.jsx)(En,{basename:`/Marlon`,children:(0,j.jsxs)(Rt,{children:[(0,j.jsx)(It,{path:`/`,element:(0,j.jsx)(ir,{})}),(0,j.jsx)(It,{path:`/login`,element:(0,j.jsx)(ar,{})}),(0,j.jsx)(It,{path:`/contact-messages`,element:(0,j.jsx)(or,{})})]})})}(0,v.createRoot)(document.getElementById(`root`)).render((0,j.jsx)(_.StrictMode,{children:(0,j.jsx)(sr,{})}));
