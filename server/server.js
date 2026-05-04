@@ -61,8 +61,8 @@ app.delete("/contact/:id", async (req, res) => {
 // Serve static frontend files
 app.use(express.static(path.join(__dirname, "../")));
 
-// Catch-all route for frontend
-app.get("*", (req, res) => {
+// Catch-all route for frontend (Express 5 compatible)
+app.get("/{*path}", (req, res) => {
   res.sendFile(path.join(__dirname, "../index.html"));
 });
 
