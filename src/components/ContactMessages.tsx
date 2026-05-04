@@ -25,7 +25,7 @@ function ContactMessages() {
 
   const fetchMessages = async () => {
     try {
-      const res = await fetch('http://localhost:5000/contact')
+      const res = await fetch('https://your-backend.onrender.com/contact')
       const data = await res.json()
       setMessages(data)
     } catch (err) {
@@ -38,7 +38,7 @@ function ContactMessages() {
   const handleDelete = async (id: string) => {
     if (!confirm('Delete this message?')) return
     try {
-      await fetch(`http://localhost:5000/contact/${id}`, { method: 'DELETE' })
+      await fetch(`https://your-backend.onrender.com/contact/${id}`, { method: 'DELETE' })
       setMessages(prev => prev.filter(m => m._id !== id))
     } catch (err) {
       console.error(err)

@@ -1,10 +1,12 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const cors = require("cors");
-const app = express();
+import express from "express";
+import mongoose from "mongoose";
+import cors from "cors";
+import dns from "dns";
 
-const dns = require("dns");
 dns.setServers(["8.8.8.8", "8.8.4.4"]);
+
+const app = express();
+const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
@@ -15,7 +17,6 @@ mongoose.connect("mongodb+srv://servicesjmseptember_db_user:HwempoyKbcSbf00j@clu
     .then(() => console.log("MongoDB connected Successfully"))
     .catch((err) => console.error("Connection failed:", err.message));
 
-
 const contactSchema = new mongoose.Schema({
     fullName: String,
     phoneNumber: String,
@@ -23,10 +24,7 @@ const contactSchema = new mongoose.Schema({
     message: String,
 }, { timestamps: true });
 
-
 const Contact = mongoose.model("contact", contactSchema, "contact");
-
-
 
 app.post("/contact", async (req, res) => {
     try {
@@ -55,4 +53,4 @@ app.delete("/contact/:id", async (req, res) => {
     }
 });
 
-app.listen(5000, () => { console.log("Server running on port 5000") });
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
