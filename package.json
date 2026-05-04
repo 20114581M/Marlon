@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "pre-deploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "start": "npx serve dist"
+    "start": "node server/server.js"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
