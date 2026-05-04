@@ -2,8 +2,13 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import dns from "dns";
+import path from "path";
+import { fileURLToPath } from "url";
 
 dns.setServers(["8.8.8.8", "8.8.4.4"]);
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -51,6 +56,14 @@ app.delete("/contact/:id", async (req, res) => {
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
+});
+
+// Serve static frontend files
+app.use(express.static(path.join(__dirname, "../")));
+
+// Catch-all route for frontend
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../index.html"));
 });
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
