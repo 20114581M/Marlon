@@ -4,7 +4,7 @@ import LogIN from './components/logIN'
 import ContactMessages from './components/ContactMessages'
 function App() {
   return (
-    <BrowserRouter basename="/Marlon">
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<LogIN />} />
