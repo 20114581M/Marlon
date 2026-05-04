@@ -45,7 +45,7 @@ function Contactus() {
     try {
       await Promise.all([
         // 1. Save to MongoDB
-        fetch('https://your-backend.onrender.com/contact', {
+        fetch('/contact', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(form),
