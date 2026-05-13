@@ -4,19 +4,19 @@ const projects = [
   {
     id: 1,
     title: 'Lab 3',
-    description: 'A web development lab exercise showcasing core frontend fundamentals.',
+    description: 'From this activity, I learned that props are used to pass data from a parent component to a child component in React, making components reusable and dynamic. I also learned that the useState hook allows a component to manage its own data internally, and that whenever the state changes, React automatically re-renders the component to reflect the update. Together, props and state form the foundation of how data flows and changes within a React application.',
     url: 'https://20114581m.github.io/lab3/',
   },
   {
     id: 2,
     title: 'Router & Form Handling',
-    description: 'A combination of client-side routing and form handling with a book request flow.',
+    description: 'From this activity, I learned that React Router enables navigation between different pages or views in a React application without reloading the entire page. I also learned that the useNavigate hook allows programmatic navigation, meaning I can redirect users to a different route based on an action or condition, such as after submitting a form. The Link component, on the other hand, works like an anchor tag but prevents full page reloads, keeping the navigation smooth and fast. Together, these tools make it possible to build multi-page experiences within a single-page application.',
     url: 'https://20114581m.github.io/RouterAndFormHandlingCombination',
   },
   {
     id: 3,
     title: 'Feedback App',
-    description: 'A simple feedback collection app built with React.',
+    description: 'From this activity, I learned that useState is essential in handling controlled forms in React, where every input field value is bound to a state variable and updated through an onChange event handler. This means the component always has full control over the form data, making it easier to validate, manipulate, or submit. I also encountered other important concepts within the code, such as onSubmit for handling form submission, e.preventDefault() to stop the default browser reload behavior, and two-way binding where the input value reflects the current state at all times. Additionally, I learned how to manage multiple fields using a single state object, updating only the relevant property using the spread operator. Overall, controlled forms with useState give developers precise control over user input throughout the entire lifecycle of the form.',
     url: 'https://20114581m.github.io/feedbackApp/',
   },
 ]
